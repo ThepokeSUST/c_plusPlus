@@ -15,9 +15,8 @@ public:
     friend void set(A &obj, int a);
 };
 // constructor
-A::A(int a)
+A::A(int a) : a(a)
 {
-    this->a = a;
 }
 // method definition
 void A::dis()
