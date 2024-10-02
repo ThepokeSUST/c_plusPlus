@@ -1,12 +1,12 @@
 #include <iostream>
 #include <sstream>
-#include <string>
+#include <string.h>
 using namespace std;
 
 int main()
 {
 
-    string str = "dipok deb nath dipu cse";
+    string str = "dipok, deb, nath, dipu, cse";
     cout << str << endl;
     stringstream ss(str);
     string s;
@@ -14,6 +14,14 @@ int main()
     {
         cout << s << endl;
     }
+    cout << str << endl;
+    stringstream sss(str);
+    while (getline(sss, s, ','))
+    {
+        cout << s << endl;
+    }
+    cout << endl
+         << endl;
 
     // swap function
     string a = "sd sdsd";
@@ -76,4 +84,14 @@ int main()
     cout << re << endl;
     re.push_back('h');
     cout << re << endl;
+    cout << endl;
+
+    // strtok function
+    char sr[] = "sdjd sjsdn ssd ";
+    char *tok = strtok(sr, " ");
+    while (tok != NULL)
+    {
+        cout << tok << endl;
+        tok = strtok(NULL, " ");
+    }
 }
