@@ -14,7 +14,7 @@ public:
     static string str;
     static void st()
     {
-        cout << a << " " << str;
+        cout << b << " " << str;
         cout << endl;
     }
 
